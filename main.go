@@ -21,7 +21,7 @@ func handleClient(clientConn net.Conn, targetAddr string) {
 
 func main() {
     listenAddr := ":" + os.Getenv("PORT")
-    targetAddr := os.Getenv("V2RAY_SERVER_IP") + ":80"
+    targetAddr := os.Getenv("V2RAY_SERVER_IP") + ":8081"
     listener, _ := net.Listen("tcp", listenAddr)
     defer listener.Close()
 
